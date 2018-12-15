@@ -1,0 +1,39 @@
+{
+  "name": "directional",
+  "version": "1.0.0",
+  "description": "Convert degrees to direction",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceloalves/directional.git"
+  },
+  "author": "Marcelo Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marceloalves/directional/issues"
+  },
+  "homepage": "https://github.com/marceloalves/directional#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  }
+}
